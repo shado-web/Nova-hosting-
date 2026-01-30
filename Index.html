@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Hosting | Minecraft Hosting</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Roboto',sans-serif;background:#0f172a;color:#e5e7eb;overflow-x:hidden;position:relative;}
+
+/* HERO */
+header{text-align:center;padding:120px 20px;position:relative;overflow:hidden;}
+header img.logo{width:150px;margin-bottom:15px;animation:floatLogo 4s ease-in-out infinite;display:block;margin-left:auto;margin-right:auto;}
+header h1{font-size:3rem;margin-bottom:10px;animation:floatHero 3s ease-in-out infinite;color:#22c55e;}
+header p{font-size:1.2rem;margin-bottom:30px;animation:fadeIn 2s ease forwards;color:#e5e7eb;}
+button.mc-btn{background:#22c55e;color:#fff;font-weight:bold;border:none;border-radius:6px;padding:12px 25px;cursor:pointer;transition:all 0.3s;}
+button.mc-btn:hover{background:#16a34a;transform:translateY(-2px);box-shadow:0 6px #16a34a;}
+
+/* FLOATING ANIMATIONS */
+@keyframes floatHero{0%{transform:translateY(0);}50%{transform:translateY(-8px);}100%{transform:translateY(0);}}
+@keyframes floatLogo{0%{transform:translateY(0);}50%{transform:translateY(-5px);}100%{transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+/* SECTIONS */
+section{max-width:1100px;margin:60px auto;padding:20px;position:relative;}
+section h2{text-align:center;font-size:2rem;margin-bottom:20px;color:#22c55e;}
+section p{text-align:center;margin-bottom:40px;}
+.features,.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+
+/* Minecraft cards */
+.mc-card{background:#1f2937;border:2px solid #374151;border-radius:12px;padding:25px;text-align:center;transition:transform 0.3s,box-shadow 0.3s;}
+.mc-card:hover{transform:translateY(-6px);box-shadow:0 12px 25px rgba(34,197,94,0.3);}
+.mc-stone{border-color:#6b7280;}
+.mc-iron{border-color:#d1d5db;}
+.mc-gold{border-color:#facc15;}
+.price{font-size:2rem;color:#22c55e;margin:15px 0;}
+ul{list-style:none;padding:0;margin:15px 0;}
+ul li{padding:6px 0;font-size:1rem;}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:all 0.7s ease;}
+.reveal.active{opacity:1;transform:translateY(0);}
+
+/* Footer */
+footer{background:#020617;text-align:center;padding:25px;font-size:0.9rem;color:#94a3b8;margin-top:50px;}
+
+/* 3D Cube Particles Background */
+.cube{position:absolute;width:15px;height:15px;background:#22c55e;opacity:0.2;border-radius:2px;animation:floatCube linear infinite;}
+@keyframes floatCube{
+0%{transform:translate3d(0,0,0) rotateX(0deg) rotateY(0deg);}
+100%{transform:translate3d(0,-900px,200px) rotateX(360deg) rotateY(360deg);}
+}
+
+/* Responsive */
+@media(max-width:1024px){header h1{font-size:2.5rem;} header p{font-size:1.1rem;} .mc-card{padding:20px;}}
+@media(max-width:768px){header h1{font-size:2.2rem;} header p{font-size:1rem;} .pricing,.features{grid-template-columns:1fr;} header img.logo{max-width:60vw;} .mc-card{padding:18px;} button.mc-btn{padding:10px 25px;}}
+@media(max-width:480px){header h1{font-size:1.8rem;} header p{font-size:0.9rem;} .mc-card{padding:15px;} button.mc-btn{padding:8px 20px;font-size:0.85rem;}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header>
+<img src="logo.png" class="logo" alt="Nova Hosting Logo">
+<h1>💎 Nova Hosting</h1>
+<p>Crystal-Clear Minecraft Hosting — Affordable • Lag-Free • Honest</p>
+<button class="mc-btn" onclick="window.location='#pricing'">Start Your Server</button>
+</header>
+
+<!-- WHY CHOOSE US -->
+<section class="reveal">
+<h2>Why CrystalCraft Hosting?</h2>
+<p>We host Minecraft servers with simplicity, honesty, and performance in mind. Your world always runs smoothly.</p>
+<div class="features">
+  <div class="mc-card mc-stone">🚀 High Performance NVMe SSD Storage</div>
+  <div class="mc-card mc-stone">🛡 DDoS Protected Servers</div>
+  <div class="mc-card mc-stone">📱 Mobile-Friendly Control Panel</div>
+  <div class="mc-card mc-stone">🕒 99.9% Uptime Guaranteed</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section class="reveal" id="pricing">
+<h2>Minecraft Hosting Plans</h2>
+<div class="pricing">
+  <div class="mc-card mc-stone">
+    <h3>Starter</h3>
+    <p class="price">₹99 / month</p>
+    <ul>
+      <li>2 GB RAM</li>
+      <li>NVMe SSD Storage</li>
+      <li>Small SMP / Friends Servers</li>
+    </ul>
+    <button class="mc-btn">Order Now</button>
+  </div>
+  <div class="mc-card mc-iron">
+    <h3>Pro ⭐</h3>
+    <p class="price">₹199 / month</p>
+    <ul>
+      <li>4 GB RAM</li>
+      <li>DDoS Protection</li>
+      <li>Plugin & Mod Support</li>
+      <li>Priority Support</li>
+    </ul>
+    <button class="mc-btn">Order Now</button>
+  </div>
+  <div class="mc-card mc-gold">
+    <h3>Ultra</h3>
+    <p class="price">₹399 / month</p>
+    <ul>
+      <li>8 GB RAM</li>
+      <li>High Player Capacity</li>
+      <li>Maximum Performance</li>
+      <li>Priority Support</li>
+    </ul>
+    <button class="mc-btn">Order Now</button>
+  </div>
+</div>
+</section>
+
+<!-- DIFFERENT -->
+<section class="reveal">
+<h2>What Makes Us Different?</h2>
+<div class="features">
+  <div class="mc-card mc-stone">✅ No Fake “Unlimited” Promises</div>
+  <div class="mc-card mc-iron">✅ Honest Resource Limits</div>
+  <div class="mc-card mc-stone">✅ Fast Discord Support</div>
+  <div class="mc-card mc-gold">✅ Player-First Hosting</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="reveal" id="contact">
+<h2>Contact & Support</h2>
+<p>Email: support@crystalcrafthosting.in</p>
+<p>Discord: CrystalCraft Hosting (Recommended)</p>
+<p>Support Hours: 10AM – 8PM IST (Usually respond in 30 mins)</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 CrystalCraft Hosting • Not affiliated with Mojang or Microsoft
+</footer>
+
+<script>
+// SCROLL REVEAL
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.reveal');
+  for(let i=0;i<reveals.length;i++){
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 100;
+    if(elementTop < windowHeight - elementVisible){
+      reveals[i].classList.add('active');
+    }
+  }
+}
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// 3D CUBE PARTICLES
+const numCubes = 50;
+for(let i=0;i<numCubes;i++){
+  let cube = document.createElement('div');
+  cube.classList.add('cube');
+  cube.style.left = Math.random()*window.innerWidth + 'px';
+  cube.style.top = Math.random()*window.innerHeight + 'px';
+  cube.style.width = (6+Math.random()*12)+'px';
+  cube.style.height = cube.style.width;
+  cube.style.animationDuration = (5+Math.random()*5)+'s';
+  document.body.appendChild(cube);
+}
+</script>
+
+</body>
+</html>
